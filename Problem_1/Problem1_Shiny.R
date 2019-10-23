@@ -13,6 +13,8 @@ library(ggmap)
 library(maptools)
 library(maps)
 
+mapWorld <- map_data("world")
+
 mp1 <- ggplot(mapWorld, aes(x=long, y=lat, group=group))+
     geom_polygon(fill="white", color="black") +
     coord_map(xlim=c(-180,180), ylim=c(-60, 90))
@@ -42,7 +44,7 @@ ui <- fluidPage(
                           ))
         ),
         
-        mainPanel( h3(textOutput("caption")),
+        mainPanel(
             plotOutput("Project")
         )
     )
