@@ -27,7 +27,7 @@ ui <- fluidPage(
     sidebarLayout(
         sidebarPanel(
             selectInput("Projections",
-                        "Choose a projection:",
+                        "Choose Your Projection:",
                         c("cylindrical",
                           "mercator",
                           "sinusoidal",
